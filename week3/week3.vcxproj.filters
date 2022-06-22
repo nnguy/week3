@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="cards.cpp">
+    <ClCompile Include="triangle.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

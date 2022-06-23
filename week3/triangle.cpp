@@ -3,6 +3,8 @@ using namespace std;
 
 double triangle_perimeter(double, double, double); 
 double average(int, int, int); 
+bool isEven(int); 
+
 
 int main() {
 	double x, y, z; 
@@ -21,3 +23,8 @@ double triangle_perimeter(double a, double b, double c) {
 double average(int a, int b, int c) {
 	return (a + b + c) / static_cast<double>(3); 
 }
+
+bool isEven(int x) {
+	return x % 2 == 0;
+}
+

@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="maxmin_reference.cpp">
+    <ClCompile Include="parallelarrays.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

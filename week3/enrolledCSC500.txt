@@ -4,4 +4,3 @@
 7890 James Gosling
 9989 Dennis Ritchie
 8754 Brian Kernighan
-1337 _____Orange Mac

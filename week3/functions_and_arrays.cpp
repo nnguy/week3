@@ -8,6 +8,7 @@ void printarr(int[], int);
 void printRoster(string[], string[], int); 
 double quizAverage(double[], int);
 int linearSearch(int[], int, int);
+int bsearch(int [], int, int);
 
 int main() {
 	ifstream infile("enrolledCSC500.txt");
@@ -19,7 +20,7 @@ int main() {
 	int counter = 0;
 	float quizgrades[CAPACITY] = { 100, 90, 85, 65, 86, 91 };
 	float quiz2grades[CAPACITY] = { 95, 91, 92, 88, 79, 82 }; 
-
+	int sortedArr[] = { 2, 3, 7, 9, 14, 16, 19, 22, 33 }; 
 	if (infile) {
 		cout << "File opened successfully" << endl;
 		while (infile >> studentID[counter]) {
@@ -36,14 +37,21 @@ int main() {
 
 		//print_letter_grade(quizgrades[4]);
 		//printarr(studentID, counter); 
-		cout << "Enter a student ID number " << endl; 
-		int id; 
-		cin >> id;
+		//cout << "Enter a student ID number " << endl; 
+		//int id; 
+		//cin >> id;
 		int x;
-		if ((x = linearSearch(studentID, counter, id)) > -1)
-			cout << lastnames[x] << " " << firstnames[x] << " : " << endl;
+		//if ((x = linearSearch(studentID, counter, id)) > -1)
+		//	cout << lastnames[x] << " " << firstnames[x] << " : " << endl;
+		//else
+		//	cout << "Student ID couldn't be found " << endl;
+		cout << "Input a value to search " << endl; 
+		int j; 
+		cin >> j; 
+		if ((x = bsearch(sortedArr, 9, j)) > -1)
+			cout << "Your value was found in index " << x << endl;
 		else
-			cout << "Student ID couldn't be found " << endl; 
+			cout << "Your value could not be found " << endl;
 		infile.close();
 
 	}
@@ -98,4 +106,27 @@ int linearSearch(int arr[], int arrSize, int value) {
 		index++;
 	}
 	return position;
+}
+
+int bsearch(int sortedArr[], int size, int val) {
+	int first = 0; 
+	int last = size - 1; 
+	int middle = 0; 
+	bool found = false; 
+	int position = -1; 
+
+	while (!found && first <= last) {
+		middle = (first + last) / 2; 
+		if (sortedArr[middle] == val) {
+			found = true; 
+			position = middle; 
+		}
+		else if (sortedArr[middle] > val) {
+			last = middle - 1; 
+		}
+		else {
+			first = middle + 1; 
+		}
+	}
+	return position; 
 }

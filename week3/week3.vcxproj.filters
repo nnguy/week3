@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="functions_and_arrays.cpp">
+    <ClCompile Include="mdarrays.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

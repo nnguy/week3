@@ -11,3 +11,13 @@ int main() {
 	cout << (*c).getColor() << endl; 
 	return 0; 
 }
+
+
+
+
+
+
+
+
+
+

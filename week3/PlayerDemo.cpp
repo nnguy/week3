@@ -3,9 +3,10 @@
 #include "Player.h"
 using namespace std; 
 
-void printPlayerInfo( Player& ); 
+void printPlayerInfo(const Player&); 
 Player createPlayer(string name, int score); 
 Player* createPlayer_ptr(string name, int score); 
+void printPlayerInfo(const Player&);
 
 int main() {
 	Player player1; 
@@ -26,7 +27,7 @@ int main() {
 	
 	//how do you call printplayerinfo on player3? - You need to dereference player3
 
-	printPlayerInfo(*player3);
+//	printPlayerInfo(*player3);
 
 	delete player3;
 
@@ -35,7 +36,9 @@ int main() {
 }
 
 //when I remove const, it works but if I add const it doesn't work?
-void printPlayerInfo( Player& p ) {
+//resolved by adding const at the end of getName() and getScore() in the Player.h and Player.cpp
+
+void printPlayerInfo(const Player& p) {
 	cout << "Player name " << p.getName() << endl; 
 	cout << "Player score " << p.getScore() << endl; 
 }

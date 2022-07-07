@@ -2,7 +2,9 @@
 #include <string>
 #include "Player.h"
 
-void Player::setName(std::string player_name) {
+using namespace std; 
+
+void Player::setName(string player_name) {
 	name = player_name; 
 }
 
@@ -10,10 +12,10 @@ void Player::setScore(int player_score) {
 	score = player_score; 
 }
 
-std::string Player::getName() {
+string Player::getName()const {
 	return name; 
 }
 
-int Player::getScore() {
+int Player::getScore() const {
 	return score; 
 }

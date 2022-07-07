@@ -4,16 +4,18 @@
 #include <string> 
 #include <iostream>
 
+using namespace std; 
+
 class Player {
 private:
-	std::string name;
+	string name;
 	int score;
 
 public:
 	void setName(std::string);
 	void setScore(int);
-	std::string getName();
-	int getScore();
+	string getName()const;
+	int getScore()const;
 
 };
 
